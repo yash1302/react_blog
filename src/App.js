@@ -30,7 +30,8 @@ function App() {
     }
   };
   return (
-    <div>
+    <>
+    <div className='bg-back_color'>
       <HomeHeading />
       <div className='flex'>
         {/* left side */}
@@ -78,7 +79,9 @@ function App() {
       </div>
 
     </div>
+    </>
   );
+  
 }
 
 export default App;

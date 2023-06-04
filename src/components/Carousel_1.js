@@ -18,4 +18,7 @@ export default function Carousel_1(props) {
   
   )
 }
+// for images use lazy loading
+
+
 

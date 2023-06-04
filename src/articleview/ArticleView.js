@@ -4,10 +4,10 @@ import images from '../images';
 
 export default function heading() {
   return (
-    <div>
+    <div className='bg-back_color text-font_color'>
       <div>
-        <p className='mt-6 ml-1 sm:ml-72 sm:pt-12 sm:tracking-tight'>Category &gt; Geo Politics</p>
-        <h1 className='mt-4 ml-1 sm:ml-72 sm:pt-8 sm:tracking-wider font-bold sm:text-3xl'>Design & Develop BERT Question Answering model<br />
+        <p className='mt-6 ml-1 sm:ml-72 sm:pt-12 sm:tracking-tight text-black'>Category &gt; Geo Politics</p>
+        <h1 className='mt-4 ml-1 sm:ml-72 sm:pt-8 sm:tracking-wider font-bold sm:text-3xl text-font_color'>Design & Develop BERT Question Answering model<br />
           explanations with visualization</h1>
         <p className='mt-4 ml-1 sm:ml-72 sm:mt-8 tracking-tight'>23 May 2023</p>
         <div className='sm:flex sm:justify-center'>

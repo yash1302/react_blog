@@ -10,7 +10,7 @@ export default function HomeHeading() {
         // </div>
         <div>
             <p className='ml-4 text-sm sm:ml-24 sm:mt-10 tracking-tight '>Home &gt; Our top stories</p>
-            <h1 className='ml-4 text-2xl sm:ml-24 sm:mt-4 sm:text-4xl text-[#196562] font-bold underline decoration-solid tracking-wide'>Our Top Stories</h1>
+            <h1 className='ml-4 text-2xl sm:ml-24 sm:mt-4 sm:text-4xl text-[#196562] font-bold underline decoration-solid tracking-wide text-font_color '>Our Top Stories</h1>
             <Link to="/Heading">article view</Link>
         </div>
     )
