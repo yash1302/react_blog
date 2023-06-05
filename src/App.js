@@ -10,6 +10,8 @@ import HomeMobile from './components/HomeMobile';
 import Carousel_middle_tablet from './components/Carousel_middle_tablet';
 import Tablet_view_cards from './components/Tablet_view_cards';
 import MostRead_tablet from './components/MostRead_tablet';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   const responsive = {
@@ -33,7 +35,10 @@ function App() {
   };
   return (
     <>
+     
       <div className='bg-back_color'>
+        {/* navbar */}
+      <Navbar/>
         {/* home heading for all screens */}
         <HomeHeading />
         <div className='flex'>
@@ -81,6 +86,7 @@ function App() {
             </Carousel>
           </div>
         </div>
+        
         {/* home screen for mobile */}
         <div className='flex flex-col sm:hidden'>
           <HomeMobile text="Ranking customer behaviours for business strategy" name="yashvardhan" date="13 February,2022" image={Images.img5} />
@@ -121,6 +127,7 @@ function App() {
             </div>
           </div>
         </div>
+        <Footer/>
 
       </div>
     </>

@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import imgCar1 from '../images/imgCar1.jpg';
 
 export default function BelowCard(props) {
   const [Title, setTitle] = useState("")

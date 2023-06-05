@@ -5,8 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route
+  RouterProvider
 } from "react-router-dom";
 import Heading from './articleview/ArticleView';
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import imgCar1 from '../images/imgCar1.jpg';
 
 export default function Carousel_midde(props) {
   return (
