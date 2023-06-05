@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         'title-green': '#196562',
         'back_color': '#CAE6FA',
-        'font_color': '#0D226B'
+        'font_color': '#0D226B',
+        'patch_color':'#A8E8FC'
       },
     },
   },

@@ -6,8 +6,10 @@ import Carousel_1 from './components/Carousel_1';
 import BelowCard from './components/BelowCard';
 import Carousel_midde from './components/Carousel_midde';
 import Images from './images/index.js';
-import { Link } from 'react-router-dom';
 import HomeMobile from './components/HomeMobile';
+import Carousel_middle_tablet from './components/Carousel_middle_tablet';
+import Tablet_view_cards from './components/Tablet_view_cards';
+import MostRead_tablet from './components/MostRead_tablet';
 
 function App() {
   const responsive = {
@@ -31,57 +33,99 @@ function App() {
   };
   return (
     <>
-    <div className='bg-back_color'>
-      <HomeHeading />
-      <div className='flex'>
-        {/* left side */}
-        <div className=" hidden sm:flex flex-col px-6 ml-4">
-          <div className='mt-10'>
-            <Carousel_1 text="Algorithmic trading for multiple commodities markets, like Forex, Metals, Energy, etc." image={Images.img4} />
+      <div className='bg-back_color'>
+        {/* home heading for all screens */}
+        <HomeHeading />
+        <div className='flex'>
+          {/* left side for big screens*/}
+          <div className=" hidden lg:flex flex-col px-6 ml-4">
+            <div className='mt-10'>
+              <Carousel_1 text="Algorithmic trading for multiple commodities markets, like Forex, Metals, Energy, etc." image={Images.img4} />
+            </div>
+            <div className='mt-2'>
+              <Carousel_1 text="Trading Bot for FOREX" image={Images.img3} />
+            </div>
           </div>
-          <div className='mt-2'>
-            <Carousel_1 text="Trading Bot for FOREX" image={Images.img3} />
+          {/* middle part big screens*/}
+          <div className='mt-10 hidden lg:flex'>
+            <Carousel_midde text="Ranking customer behaviours for business strategy" name="yashvardhan" date="13 February,2022" image={Images.img5} />
+          </div>
+          {/* lower side big screens*/}
+          <div className="px-6 hidden lg:flex flex-col">
+            <div className='mt-10'>
+              <Carousel_1 text="Python model for the analysis of sector-specific stock ETFs for investment purposes" image={Images.img1} />
+            </div>
+            <div className='mt-2'>
+              <Carousel_1 text="Medical Classification" image={Images.img2} />
+            </div>
           </div>
         </div>
-        {/* middle part */}
-        <div className='mt-10 hidden sm:flex'>
-          <Carousel_midde text="Ranking customer behaviours for business strategy" name="yashvardhan" date="13 February,2022" image={Images.img5} />
+        {/* carousel for big screens */}
+        <div className='hidden lg:block mx-12 mt-4'>
+          <Carousel responsive={responsive}>
+            <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} /></div>
+            <div><BelowCard text="Design and develop solution to anomaly detection classification problems" name="Ajay B" date="October 17 2022" image={Images.img2} /></div>
+            <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} /></div>
+            <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} /></div>
+          </Carousel>
         </div>
-        {/* lower side */}
-        <div className="px-6 hidden sm:flex flex-col">
-          <div className='mt-10'>
-            <Carousel_1 text="Python model for the analysis of sector-specific stock ETFs for investment purposes" image={Images.img1} />
-          </div>
-          <div className='mt-2'>
-            <Carousel_1 text="Medical Classification" image={Images.img2} />
+        {/* most read for big screens */}
+        <div className=' bg-patch_color'>
+          <h2 className='ml-24 my-12 font-bold text-font_color text-2xl hidden lg:block'>Most read</h2>
+          <div className='hidden lg:block mx-12 mt-4'>
+            <Carousel responsive={responsive}>
+              <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} /></div>
+              <div><BelowCard text="Design and develop solution to anomaly detection classification problems" name="Ajay B" date="October 17 2022" image={Images.img2} /></div>
+              <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} /></div>
+              <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} /></div>
+            </Carousel>
           </div>
         </div>
-      </div>
-      {/* <div className='mt-24 flex space-x-12 ml-12'>
-        <BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
-        <BelowCard text="Design and develop solution to anomaly detection classification problems" name="Ajay B" date="October 17 2022" image={Images.img2} />
-        <BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} />
+        {/* home screen for mobile */}
+        <div className='flex flex-col sm:hidden'>
+          <HomeMobile text="Ranking customer behaviours for business strategy" name="yashvardhan" date="13 February,2022" image={Images.img5} />
+          <HomeMobile text="Design and develop solution to anomaly detection classification problems" name="Ajay B" date="October 17 2022" image={Images.img2} />
+          <HomeMobile text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} />
+          <HomeMobile text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img4} />
+        </div>
+        {/* home screen for tablet */}
+        <div className="hidden md:flex lg:hidden">
+          <div className='flex flex-col'>
+            <Carousel_middle_tablet text="Ranking customer behaviours for business strategy" name="yashvardhan" date="13 February,2022" image={Images.img5} />
+            <Tablet_view_cards text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
+            <Tablet_view_cards text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
+            <Tablet_view_cards text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
+          </div>
+        </div>
+        {/* most read for phone view */}
+        <div className='bg-patch_color'>
+          <h2 className='font-bold text-xl ml-4 my-6 md:hidden'>Most read</h2>
+          <div className='flex flex-col sm:hidden'>
+            <HomeMobile text="Ranking customer behaviours for business strategy" name="yashvardhan" date="13 February,2022" image={Images.img5} />
+            <HomeMobile text="Design and develop solution to anomaly detection classification problems" name="Ajay B" date="October 17 2022" image={Images.img2} />
+            <HomeMobile text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} />
+            <HomeMobile text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img4} />
+          </div>
+        </div>
+        {/* most read for tablet view */}
+        <div className='bg-patch_color'>
+          <h2 className='font-bold text-xl ml-8 my-6 hidden md:flex lg:hidden'>Most read</h2>
+          <div className="hidden md:flex lg:hidden">
+            <div>
+            <MostRead_tablet text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
+            <MostRead_tablet text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
+            </div>
+            <div>
+            <MostRead_tablet text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
+            <MostRead_tablet text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} />
+            </div>
+          </div>
+        </div>
 
-      </div> */}
-      <div className='hidden md:block mx-12 mt-4'>
-        <Carousel responsive={responsive}>
-          <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="September 17 2022" image={Images.img3} /></div>
-          <div><BelowCard text="Design and develop solution to anomaly detection classification problems" name="Ajay B" date="October 17 2022" image={Images.img2} /></div>
-          <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} /></div>
-          <div><BelowCard text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} /></div>
-        </Carousel>
       </div>
-      <div className='flex flex-col sm:hidden'>
-        <HomeMobile text="Ranking customer behaviours for business strategy" name="yashvardhan" date="13 February,2022" image={Images.img5} />
-        <HomeMobile text="Design and develop solution to anomaly detection classification problems" name="Ajay B" date="October 17 2022" image={Images.img2} />
-        <HomeMobile text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img1} />
-        <HomeMobile text="Design & Develop BERT Question Answering model explanations with visualization" name="Aditya P" date="October 17 2022" image={Images.img4} />
-      </div>
-
-    </div>
     </>
   );
-  
+
 }
 
 export default App;
