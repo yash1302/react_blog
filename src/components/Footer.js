@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='flex flex-col justify-between'>
-        <div>
+        <div className=''>
         <h6 className='font-medium text-black'>Subscribe to read blogs</h6>
           <input
             type='email'

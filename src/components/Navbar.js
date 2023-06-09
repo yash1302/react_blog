@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='flex justify-between items-center h-12  mx-auto px-4 text-font_color bg-patch_color'>
+    <div className='flex justify-between items-center h-12 mx-auto  px-4 text-font_color bg-patch_color'>
       <h1 className='w-full text-3xl font-bold text-[#38bdf8]'>MUNity Blogs</h1>
 
       {/* Desktop Navigation */}
